@@ -8,16 +8,13 @@
 <body>
     
     
-  <img src="img/71G2oigNdGL._AC_UL1500_.jpg" id="myImage" onmouseover="changeImageSource()" style="width: 200px; border: 1px solid red;" alt="men">
-  <button onclick="">Click here</button>
-
-
+  <img src="img/71G2oigNdGL._AC_UL1500_.jpg" id="myImage" alt="men">
+  <button onclick="changeImage()">Change Image</button>
 
   <script>
-
-
-
-
+    function changeImage() {
+      document.getElementById('myImage').src = './img/71wVTA3RUPL._AC_UL1500_.jpg';
+    }
   </script>
 </body>
 </html>
