@@ -8,22 +8,20 @@
 <body>
 
 
+    <p id="myParagraph">Click to change color</p>
+    <button onclick="highlightParagraph()">Click here</button>
 
 
 
-    <button id="myButton" onclick={changeParagraph()} >Click me</button>
-    <p id="myParagraph" >This is a paragraph.</p>
 
   
     <script>
-      
-      function changeParagraph() {
+      function highlightParagraph() {
         var paragraph = document.getElementById("myParagraph");
-        paragraph.textContent = "Button Clicked!";
+        paragraph.style.backgroundColor = "yellow";
       }
 
 
     </script>
-    
-</body>
+  </body>
 </html>

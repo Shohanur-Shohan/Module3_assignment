@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myList"></ul>
+
+
+
+
+
+<script>
+    function listItems() {
+    
+
+    for (var i = 1; i <= 5; i++) {
+        var li = document.createElement('li');
+        li.textContent = i;
+        document.getElementById('myList').appendChild(li);
+    }
+    }
+    listItems();
+
+
+
+</script>
+
+</body>
+</html>
