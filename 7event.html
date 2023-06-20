@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="text-align: center;">
+
+  <h1>1 Click anywhere on the page</h1>
+
+  <h1>2 Type any key</h1>
+
+  <h1>3 Mouse over this image</h1>
+  <img src="img/71G2oigNdGL._AC_UL1500_.jpg" id="myImage" onmouseover="changeImageSource()" style="width: 200px; border: 1px solid red;" alt="men">
+
+
+
+
+  <script>
+    //coordinates
+    document.addEventListener('click', function(event) {
+      var x = event.clientX;
+      var y = event.clientY;
+      alert("Clicked at coordinates (x, y): " + x + ", " + y);
+    });
+
+    //key code
+    document.addEventListener("keydown", function(event) {
+      alert("Key code: " + event.keyCode);
+    });
+
+    //change image
+    function changeImageSource() {
+      var image = document.getElementById("myImage");
+      image.src = "./img/71wVTA3RUPL._AC_UL1500_.jpg";
+    }
+
+    </script>
+</body>
+</html>

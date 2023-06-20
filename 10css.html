@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+    <button id="myButton" onclick={changeParagraph()} >Click me</button>
+    <p id="myParagraph" >This is a paragraph.</p>
+
+  
+    <script>
+      
+      function changeParagraph() {
+        var paragraph = document.getElementById("myParagraph");
+        paragraph.textContent = "Button Clicked!";
+      }
+
+
+    </script>
+    
+</body>
+</html>

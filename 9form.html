@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 1px solid red; margin: 0 auto; width: 500px;">
+        <form action="#" method="post" onsubmit="return validateForm()">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"><br><br>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    
+
+
+
+<script>
+
+function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirm-password").value;
+
+    // Validate name
+    var nameRegex = /^[a-zA-Z]+$/;
+    if (name === "") {
+        alert("Name cannot be empty");
+        return false;
+    } else if (!nameRegex.test(name)) {
+        alert("Name should contain only letters");
+        return false;
+    }
+
+    // Validate email
+    var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (email === "") {
+        alert("Email cannot be empty");
+        return false;
+    } else if (!emailRegex.test(email)) {
+        alert("Invalid email address");
+        return false;
+    }
+
+    // Validate password
+    var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+    if (password === "") {
+        alert("Password cannot be empty");
+        return false;
+    } else if (!passwordRegex.test(password)) {
+        alert("Password must have a minimum length of 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit");
+        return false;
+    }
+
+    // Validate confirm password
+    if (confirmPassword === "") {
+        alert("Confirm Password cannot be empty");
+        return false;
+    } else if (confirmPassword !== password) {
+        alert("Confirm Password does not match the Password");
+        return false;
+    }
+
+    // Form is valid
+    return true;
+}
+
+
+</script>
+</body>
+</html>
