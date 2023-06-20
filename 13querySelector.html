@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p class="class1">class1</p>
+    <p class="class2">class2</p>
+    <p class="class1">class3</p>
+
+    <button onclick="changeColor()">click to change</button>
+
+
+
+
+    <script>
+        function changeColor(){
+            var text = document.getElementsByClassName("class1");
+
+            for (var i = 0; i < text.length; i++) {
+                text[i].style.color = "red";
+            }
+        }
+        
+    </script>
+</body>
+</html>
